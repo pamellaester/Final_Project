@@ -1,0 +1,47 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #f0eaff; /* Lighter Lavender */
+  padding: 15px 0;
+  text-align: center; /* Centralizar os itens */
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centralizar os itens */
+}
+
+.navbar-item {
+  margin: 0 10px; /* Reduzir o espaçamento horizontal entre os itens */
+  position: relative;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #a9a3ff; /* Lighter Purple */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #a9a3ff; /* Lighter Purple */
+  transition: width 0.3s ease;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+.navbar-item:hover .navbar-link {
+  color: #926aae; /* Lighter purple on hover */
+}

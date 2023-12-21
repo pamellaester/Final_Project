@@ -1,0 +1,69 @@
+/* PublicPage.css */
+
+/* Overall styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.public-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+}
+
+.page-content {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #6c63ff; /* New palette header color */
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #6c63ff; /* New palette header color */
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Styling for different sections */
+.section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+/* Highlighted information */
+.highlight {
+  font-weight: bold;
+  color: #9d4edd; /* Brighter lavender highlight - This color remains the same */
+}
+
+/* Emphasize links */
+a {
+  color: #6c63ff; /* New palette link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #5a52cc; /* Darker new palette hover color */
+}

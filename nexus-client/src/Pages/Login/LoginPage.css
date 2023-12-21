@@ -1,0 +1,74 @@
+/* Background and accent colors from the palette */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1e6f6; /* Soft lavender background */
+}
+
+/* Form container */
+.login-form {
+  width: 300px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Input styles */
+input {
+  width: calc(100% - 24px); /* Adjust input width */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #6c63ff; /* Input border color */
+  border-radius: 5px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #6c63ff; /* Input placeholder color */
+}
+
+button {
+  width: calc(100% - 24px); /* Adjust button width */
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #6c63ff; /* Button color */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  /* Add missing vendor-specific prefixes for transitions */
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a52cc; /* Darker button hover color */
+  /* Add missing vendor-specific prefixes for hover */
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.errmsg {
+  display: none;
+  color: #d8000c; /* Red color for error messages */
+  background-color: #ffd2d2; /* Light red background */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.show-errmsg {
+  display: block; /* Display when error message is shown */
+}

@@ -1,0 +1,91 @@
+/* PhysicalChanges.css */
+
+.physical-changes-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f2e9ff; /* Soft lavender */
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #6c63ff; /* Lighter Purple */
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+input[type="range"] {
+  /* Styles for range inputs */
+}
+
+label {
+  color: #6c63ff; /* Lighter Purple */
+  font-weight: bold;
+}
+
+textarea {
+  width: 80%;
+  height: 80px;
+  resize: none;
+  margin-bottom: 20px;
+  border: 1px solid #b18cc6; /* Lighter lavender */
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.button {
+  background-color: #6c63ff; /* Lighter Purple */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #926aae; /* Lighter purple */
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 10px;
+  background: #f2e9ff; /* Soft lavender */
+  outline: none;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #6c63ff; /* Lighter Purple */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #6c63ff; /* Lighter Purple */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
