@@ -18,8 +18,7 @@ const PostpartumDateTracker = () => {
 
   return (
     <div className="component-container">
-      <h2>Postpartum Date Tracker</h2>
-      <label htmlFor="dueDate">Enter your due date:</label>
+      <p>Enter your due date:</p>
       <input
         type="date"
         id="dueDate"

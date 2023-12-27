@@ -1,29 +1,62 @@
-.user-page-container {
+/* UserPage.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-.card {
-  background-color: #f5f5f5; /* Light gray background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+h1 {
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.flex-row {
+.complements {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styling for each component */
+/* IconProfile */
+.icon-profile-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* MoodTracker */
+.mood-tracker-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* PostpartumDateTracker */
+.postpartum-date-tracker-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* QuizBoard */
+.quiz-board-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* WeeklyTracker */
+.weekly-tracker-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

@@ -1,9 +1,13 @@
 /* Navbar.css */
 
 .navbar {
-  background-color: #f0eaff; /* Lighter Lavender */
-  padding: 15px 0;
-  text-align: center; /* Centralizar os itens */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it's above other content */
+  background-color: #6b63ff; /* Lighter Lavender */
+  padding: 25px 0;
+  text-align:end; /* Centralizar os itens */
 }
 
 .navbar-list {
@@ -21,7 +25,7 @@
 
 .navbar-link {
   text-decoration: none;
-  color: #a9a3ff; /* Lighter Purple */
+  color: #ffffff; /* Lighter Purple */
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -34,7 +38,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #a9a3ff; /* Lighter Purple */
+  background-color: #fbfbff; /* Lighter Purple */
   transition: width 0.3s ease;
 }
 
@@ -43,5 +47,5 @@
 }
 
 .navbar-item:hover .navbar-link {
-  color: #926aae; /* Lighter purple on hover */
+  color: #cfcdf7; /* Lighter purple on hover */
 }

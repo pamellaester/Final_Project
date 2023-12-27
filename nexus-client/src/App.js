@@ -7,6 +7,8 @@ import UserPage from "./Pages/User/UserPage";
 import Navbar from "./components/Navbar/Navbar"
 import Logout from "./Pages/Logout/LogoutPage";
 import SafeSpacePage from "./Pages/SafeSpace/SafeSpacePage";
+import SafeSpaceBtn from "./Pages/SafeSpace/SafeSpaceBtn";
+import CheckListPage from "./Pages/CheckList/CheckListPage";
 
 import RequireAuth from "./components/RequireAuth";
 
@@ -22,7 +24,9 @@ const App = () => {
         <Route element={<RequireAuth />}>
           <Route path="/user" element={<UserPage />} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/safe-space" element={<SafeSpacePage/>}/>
+          <Route path="/safe-space" element={<SafeSpacePage />} />
+          <Route path="/safe-space-btn" element={<SafeSpaceBtn />} />
+          <Route path="/check-list" element={<CheckListPage />} />
         </Route>
       </Routes>
     </div>

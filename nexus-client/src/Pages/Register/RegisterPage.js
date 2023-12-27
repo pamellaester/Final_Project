@@ -15,8 +15,6 @@ const RegisterPage = () => {
   const errRef = useRef();
 
   const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
     username: "",
     email: "",
     password: "",
@@ -71,8 +69,6 @@ const RegisterPage = () => {
       if (response?.status === 201) {
         setSuccess(true);
         setFormData({
-          first_name: "",
-          last_name: "",
           username: "",
           email: "",
           password: "",
@@ -105,25 +101,8 @@ const RegisterPage = () => {
       ) : (
         <section className="register-container">
           <div className="register-form">
-            <h2>Register</h2>
+            <h1>Register</h1>
             <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="first_name"
-                placeholder="First Name"
-                value={formData.first_name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="last_name"
-                placeholder="Last Name"
-                value={formData.last_name}
-                onChange={handleChange}
-                required
-              />
-
               <input
                 type="text"
                 name="username"
@@ -210,7 +189,7 @@ const RegisterPage = () => {
               <br />
 
               <button disabled={!validName || !validPwd ? true : false}>
-                Register
+                Continue
               </button>
             </form>
             <p>

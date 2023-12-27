@@ -1,11 +1,12 @@
 const bcrypt = require("bcrypt");
 const UserModel = require("../Models/user-model");
 const HashPwdModel = require("../Models/hashPwdModel");
+const db = require("../config/database");
 
 const UserController = {
   register: async (req, res) => {
     try {
-      const { first_name, last_name, username, email, password } = req.body;
+      const { username, email, password } = req.body;
       console.log("req.body",req.body)
 
       const hashedPassword = await bcrypt.hash(password, 10);
@@ -17,8 +18,6 @@ const UserController = {
       }
 
       const newUser = await UserModel.create({
-        first_name,
-        last_name,
         username,
         email,
       });
@@ -70,6 +69,32 @@ const UserController = {
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Error logging in" });
+    }
+  },
+
+  saveQuizResponses : async (req, res) => {
+    const user_id = req.params.id ;
+    const quizResponses = req.body;
+  
+    try {
+      await UserModel.create_user_profile({ user_id: user_id, ...quizResponses });
+  
+      res.status(200).json({ success: true, message: 'Quiz responses saved successfully' });
+    } catch (error) {
+      console.error('Error saving quiz responses:', error);
+      res.status(500).json({ success: false, error: 'Failed to save quiz responses' });
+    }
+  },
+  
+  quizCompletion: async (req, res) => { 
+    const user_id  = req.params.id; 
+
+    try {
+      await db('users').where({ id: user_id }).update({ quiz_completed: true });
+      res.sendStatus(200); 
+    } catch (error) {
+      console.error('Error marking quiz completion:', error);
+      res.sendStatus(500); 
     }
   },
 

@@ -7,7 +7,7 @@ const SafeSpaceButton = () => {
 
   const handleClick = () => {
     // Redirect to a new page, for example '/safe-space'
-    navigate('/safe-space');
+    navigate('/safe-space-btn');
   };
 
   return (

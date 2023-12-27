@@ -1,9 +1,7 @@
-/* QuizBoard.css */
-
-.quiz-container {
+/* .quiz-container {
     text-align: center;
     padding: 20px;
-    background-color: #e9e7fe; /* Soft Lavender */
+    background-color: #e9e7fe; 
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 80%;
@@ -11,7 +9,7 @@
   }
   
   h2 {
-    color: #6c63ff; /* Lighter Purple */
+    color: #6c63ff; 
     margin-bottom: 15px;
   }
   
@@ -26,33 +24,19 @@
     gap: 10px;
   }
   
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: #fff;
-  }
-  
   button:focus {
     outline: none;
   }
   
   button:nth-child(1) {
-    background-color: #7f77f3; /* Darker Purple */
+    background-color: #7f77f3; 
   }
   
   button:nth-child(2) {
-    background-color: #8c85ff; /* Lighter Lavender */
+    background-color: #8c85ff; 
   }
-  
-  button:nth-child(3) {
-    background-color: #6c63ff; /* Lighter Purple */
-  }
-  
+ 
   button:hover {
     filter: brightness(1.1);
   }
-  
+   */

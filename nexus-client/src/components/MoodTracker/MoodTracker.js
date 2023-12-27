@@ -12,7 +12,7 @@ const MoodTracker = () => {
 
   return (
     <div className="mood-tracker-container">
-      <h2>Mood Tracker</h2>
+      <p>Select your Mood:</p>
       <div className="mood-icons">
         {moodEmojis.map((emoji, index) => (
           <span

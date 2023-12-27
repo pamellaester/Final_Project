@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import SafeSpaceButton from "../../components/SafeSpaceButton/SafeSpaceButton";
 import AuthContext from "../../Context/AuthProvider";
 import "./Navbar.css";
 
@@ -19,6 +20,17 @@ const Navbar = () => {
             <li className="navbar-item">
               <Link to="/user" className="navbar-link">
                 Profile
+              </Link>
+            </li>
+            <SafeSpaceButton />
+            <li className="navbar-item">
+              <Link to="/safe-space" className="navbar-link">
+                Safe space
+              </Link>
+            </li>
+            <li className="navbar-item">
+              <Link to="/check-list" className="navbar-link">
+                History
               </Link>
             </li>
             <li className="navbar-item">

@@ -1,3 +1,83 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.safe-space {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.info-section h2 {
+    width: 100vw;
+    margin: 0;
+    font-size: 28px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.info-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-section li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.reminder {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -25,16 +105,7 @@
   label {
     font-weight: bold;
   }
-  
-  input,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-top: 8px;
-  }
+
   
   .submit-btn {
     background-color: #4caf50;
@@ -50,4 +121,48 @@
   .submit-btn:hover {
     background-color: #45a049;
   }
+
+  .background {
+    /* background-image: url('your-image.jpg'); */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
+  /* Apply Parallax Effect to Other Elements */
+  .section {
+    transform: translateY(-50%);
+  }
+  
+  
+  /* Other styles... */
+
+/* Add your existing styles here */
+
+.cute-card {
+  
+  text-align: center;
+  background-color: #6b63ff2e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.cute-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.cute-card p {
+  line-height: 1.6;
+}
+
+.cute-card ul {
+  padding-left: 20px;
+}
+
+.cute-card li {
+  margin-bottom: 10px;
+}

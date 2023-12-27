@@ -7,7 +7,7 @@ import "./LoginPage.css";
 const API_URL = "http://localhost:3000";
 
 const Login = () => {
-  const { setAuth } = useAuth();
+  const { setAuth, auth } = useAuth();
   const userRef = useRef();
   const errRef = useRef();
 
@@ -28,6 +28,27 @@ const Login = () => {
   useEffect(() => {
     setErrMsg("");
   }, [formData.username, formData.password]);
+
+  useEffect(() => {
+    const checkQuizCompletion = async () => {
+      try {
+        const response = await axios.get(`${API_URL}/quiz-completion/${auth.id}`);
+        const { quiz_completed } = response.data;
+  
+        if (!quiz_completed) {
+          navigate("/user"); // Redirect to the quiz page if quiz_completed is false
+        } else {
+          // navigate("/login"); // Redirect to the user page if quiz_completed is true
+        }
+      } catch (error) {
+        console.error('Error checking quiz completion:', error);
+      }
+    };
+    
+    if (success && auth) {
+      checkQuizCompletion();
+    }
+  }, [success, auth, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -84,7 +105,7 @@ const Login = () => {
       ) : (
         <section className="login-container">
           <div className="login-form">
-            <h2>Login</h2>
+            <h1>Log in</h1>
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -106,12 +127,12 @@ const Login = () => {
                 value={formData.password}
                 required
               />
-              <button type="submit">Login</button>
+              <button type="submit">Continue</button>
               <p>
-                Need an Account?
+                New to Nexus?
                 <br />
                 <span className="line">
-                  <a href="/register">Sign Up</a>
+                  <a href="/register">Create and account</a>
                 </span>
               </p>
             </form>

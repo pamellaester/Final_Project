@@ -1,9 +1,7 @@
-/* PostpartumDateTracker.css */
-
-.component-container {
+/* .component-container {
   text-align: center;
   padding: 20px;
-  background-color: #f2e9f5; /* Lighter Lavender */
+  background-color: #f2e9f5; 
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   width: 80%;
@@ -11,7 +9,7 @@
 }
 
 h2 {
-  color: #6c63ff; /* Lighter Purple */
+  color: #6c63ff; 
   margin-bottom: 15px;
 }
 
@@ -22,16 +20,16 @@ label {
 
 input[type="date"] {
   padding: 8px;
-  border: 1px solid #6c63ff; /* Lighter Purple */
+  border: 1px solid #6c63ff;
   border-radius: 5px;
 }
 
 input[type="date"]:focus {
   outline: none;
-  border-color: #7f5d9b; /* Lighter Lavender */
+  border-color: #7f5d9b; 
 }
 
 p {
   margin-top: 20px;
   font-weight: bold;
-}
+} */
