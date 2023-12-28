@@ -8,7 +8,6 @@ const API_URL = "http://localhost:3000";
 
 const SafeSpaceBtn = () => {
   const { auth } = useAuth();
-  console.log(auth);
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -28,13 +27,11 @@ const SafeSpaceBtn = () => {
   };
 
   const handleAddTrigger = () => {
-    // Create a new array with the existing triggers and add an empty string as a new trigger
     const updatedTriggers = [...formData.triggers, ""];
     setFormData({ ...formData, triggers: updatedTriggers });
   };
 
   const handleTriggerChange = (index, value) => {
-    // Update the triggers array with the modified value at the specified index
     const updatedTriggers = [...formData.triggers];
     updatedTriggers[index] = value;
     setFormData({ ...formData, triggers: updatedTriggers });
@@ -66,11 +63,8 @@ const SafeSpaceBtn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_URL}/safe-space`, formData);
-      console.log(response.data);
-      console.log(response);
-      console.log(formData);
-
+      await axios.post(`${API_URL}/safe-space`, formData);
+      
       setSubmitted(true);
       setTimeout(() => {
         navigate(-1);
@@ -84,7 +78,7 @@ const SafeSpaceBtn = () => {
     <>
       {!submitted ? (
         <div className="sf-section info-section">
-          <h2>Crisis Check</h2> <br/>
+          <h2>Crisis Check</h2> <br />
           <form onSubmit={handleSubmit} className="form">
             <div className="column-btn">
               <div className="input-group">
@@ -114,7 +108,6 @@ const SafeSpaceBtn = () => {
               </div>
             </div>
 
-            {/* Negative thoughts input group */}
             <div className="input-item">
               <div className="column-btn">
                 <div className="input-group">
@@ -179,10 +172,9 @@ const SafeSpaceBtn = () => {
               </div>
             </div>
             <button type="submit" className="submit-btn">
-            Save
-          </button>
+              Save
+            </button>
           </form>
-          {/* Submit button */}
         </div>
       ) : (
         <div className="notification">

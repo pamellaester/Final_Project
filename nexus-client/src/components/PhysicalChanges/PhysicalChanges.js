@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import './PhysicalChanges.css'; // Import your CSS file for styling
+import React, { useState } from "react";
+import "./PhysicalChanges.css";
 
 const PhysicalChanges = () => {
   const [weight, setWeight] = useState(50);
   const [height, setHeight] = useState(50);
   const [waist, setWaist] = useState(50);
   const [hips, setHips] = useState(50);
-  const [otherChanges, setOtherChanges] = useState('');
+  const [otherChanges, setOtherChanges] = useState("");
 
   const handleInputChange = (value, setter) => {
     setter(value);
@@ -14,11 +14,11 @@ const PhysicalChanges = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Weight:', weight);
-    console.log('Height:', height);
-    console.log('Waist:', waist);
-    console.log('Hips:', hips);
-    console.log('Other Changes:', otherChanges);
+    console.log("Weight:", weight);
+    console.log("Height:", height);
+    console.log("Waist:", waist);
+    console.log("Hips:", hips);
+    console.log("Other Changes:", otherChanges);
   };
 
   return (
@@ -33,7 +33,9 @@ const PhysicalChanges = () => {
             min="0"
             max="100"
             value={weight}
-            onChange={(e) => handleInputChange(parseInt(e.target.value), setWeight)}
+            onChange={(e) =>
+              handleInputChange(parseInt(e.target.value), setWeight)
+            }
             className="custom-slider"
           />
           <span>{weight}</span>
@@ -46,7 +48,9 @@ const PhysicalChanges = () => {
             min="0"
             max="100"
             value={height}
-            onChange={(e) => handleInputChange(parseInt(e.target.value), setHeight)}
+            onChange={(e) =>
+              handleInputChange(parseInt(e.target.value), setHeight)
+            }
             className="custom-slider"
           />
           <span>{height}</span>
@@ -59,7 +63,9 @@ const PhysicalChanges = () => {
             min="0"
             max="100"
             value={waist}
-            onChange={(e) => handleInputChange(parseInt(e.target.value), setWaist)}
+            onChange={(e) =>
+              handleInputChange(parseInt(e.target.value), setWaist)
+            }
             className="custom-slider"
           />
           <span>{waist}</span>
@@ -72,7 +78,9 @@ const PhysicalChanges = () => {
             min="0"
             max="100"
             value={hips}
-            onChange={(e) => handleInputChange(parseInt(e.target.value), setHips)}
+            onChange={(e) =>
+              handleInputChange(parseInt(e.target.value), setHips)
+            }
             className="custom-slider"
           />
           <span>{hips}</span>

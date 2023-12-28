@@ -1,8 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {faCheck,faTimes,faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faTimes,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import register from '../../assets/register.png'; 
+import register from "../../assets/register.png";
 
 import axios from "axios";
 import "./RegisterPage.css";
@@ -65,7 +69,7 @@ const RegisterPage = () => {
     console.log(formData);
     try {
       const response = await axios.post(`${API_URL}/register`, formData);
-      console.log(response);
+      // console.log(response);
 
       if (response?.status === 201) {
         setSuccess(true);
@@ -206,12 +210,15 @@ const RegisterPage = () => {
               aria-live="assertive"
             >
               {errMsg}
-              </p>
-            </div>
+            </p>
+          </div>
         </section>
       )}
-     <img src={register} alt="Image description 1" className="section-register" />
-
+      <img
+        src={register}
+        alt="register"
+        className="section-register"
+      />
     </>
   );
 };

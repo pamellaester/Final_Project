@@ -56,7 +56,6 @@ const UserModel = {
       throw error;
     }
   },
-  
 };
 
 module.exports = UserModel;

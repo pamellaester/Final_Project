@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import './PostpartumDateTracker.css';
+import React, { useState } from "react";
+import "./PostpartumDateTracker.css";
 
 const PostpartumDateTracker = () => {
-  const [dueDate, setDueDate] = useState('');
+  const [dueDate, setDueDate] = useState("");
   const [daysPostpartum, setDaysPostpartum] = useState(null);
 
   const handleDateChange = (event) => {
     const selectedDate = new Date(event.target.value);
-    setDueDate(selectedDate.toISOString().split('T')[0]);
+    setDueDate(selectedDate.toISOString().split("T")[0]);
 
-    // Calculate days postpartum
     const currentDate = new Date();
     const differenceInTime = currentDate.getTime() - selectedDate.getTime();
     const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
@@ -31,6 +30,5 @@ const PostpartumDateTracker = () => {
     </div>
   );
 };
-
 
 export default PostpartumDateTracker;

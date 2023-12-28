@@ -1,14 +1,11 @@
-import React from 'react';
-import './IconProfile.css'; 
-import useAuth from "../../hooks/useAuth"
+import React from "react";
+import "./IconProfile.css";
+import useAuth from "../../hooks/useAuth";
 import PostpartumDateTracker from "../../components/PostpartumDateTracker/PostpartumDateTracker";
 import MoodTracker from "../../components/MoodTracker/MoodTracker";
 
-
 const IconProfile = () => {
-    const { auth } = useAuth();
-
-
+  const { auth } = useAuth();
 
   return (
     <div className="user-info">
@@ -18,12 +15,12 @@ const IconProfile = () => {
       <p>Gender: </p>
       <div className="user-details">
         <div className="user-circle">
-        <PostpartumDateTracker />
+          <PostpartumDateTracker />
         </div>
         <MoodTracker />
       </div>
     </div>
   );
-}
+};
 
 export default IconProfile;

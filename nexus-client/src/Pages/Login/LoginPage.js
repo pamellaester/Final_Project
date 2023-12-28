@@ -42,10 +42,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(`${API_URL}/login`, formData);
-
-      console.log("test", JSON.stringify(response?.data));
-      console.log(response.data);
-      console.log(response);
+      // console.log(response.data);
 
       if (response?.status === 200) {
         setAuth({...formData, id: response?.data?.user});
@@ -128,7 +125,7 @@ const Login = () => {
           </div>
         </section>
       )}
-      <img src={login} alt="Image description 1" className="section-login" />
+      <img src={login} alt="login" className="section-login" />
 
     </>
   );

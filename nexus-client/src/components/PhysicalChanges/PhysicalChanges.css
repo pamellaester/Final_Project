@@ -5,14 +5,14 @@ PhysicalChanges.css
   max-width: 500px;
   margin: 0 auto;
   padding: 30px;
-  background-color: #f2e9ff; /* Soft lavender */
+  background-color: #f2e9ff;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 h2 {
-  color: #6c63ff; /* Lighter Purple */
+  color: #6c63ff;
   margin-bottom: 20px;
 }
 
@@ -26,10 +26,11 @@ h2 {
   width: 80%;
   margin-bottom: 20px;
 }
-
+/* 
 input[type="range"] {
-  /* Styles for range inputs */
-}
+  /* Styles for range inputs
+ } */
+
 
 label {
   color: #6c63ff; /* Lighter Purple */

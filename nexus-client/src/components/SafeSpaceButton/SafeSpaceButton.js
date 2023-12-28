@@ -1,13 +1,12 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './SafeSpaceButton.css'; 
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./SafeSpaceButton.css";
 
 const SafeSpaceButton = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Redirect to a new page, for example '/safe-space'
-    navigate('/safe-space-btn');
+    navigate("/safe-space-btn");
   };
 
   return (
@@ -15,7 +14,6 @@ const SafeSpaceButton = () => {
       <span>Safe Space</span>
     </div>
   );
-}
+};
 
 export default SafeSpaceButton;
-

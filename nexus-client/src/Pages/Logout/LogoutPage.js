@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
-import axios from 'axios';
-import './LogoutPage.css';
-
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import axios from "axios";
+import "./LogoutPage.css";
 
 const API_URL = "http://localhost:3000";
 
 const LogoutPage = () => {
   const navigate = useNavigate();
   const { handleLogout } = useAuth();
-  const [message, setMessage] = useState('Logging out...');
+  const [message, setMessage] = useState("Logging out...");
 
   useEffect(() => {
     const logout = async () => {
@@ -18,27 +17,27 @@ const LogoutPage = () => {
         const response = await axios.post(`${API_URL}/logout`);
 
         if (response?.status === 200) {
-          setMessage('Logout successful. Redirecting...');
+          setMessage("Logout successful. Redirecting...");
           setTimeout(() => {
             handleLogout();
-            navigate('/'); 
+            navigate("/");
           }, 3000);
-        } 
+        }
       } catch (error) {
-        setMessage('Logout failed. Redirecting...');
+        setMessage("Logout failed. Redirecting...");
         setTimeout(() => {
-          navigate('/');
+          navigate("/");
         }, 3000);
       }
     };
 
     logout();
   }, [navigate, handleLogout]);
-  
+
   useEffect(() => {
-    const container = document.querySelector('.logout-container');
+    const container = document.querySelector(".logout-container");
     if (container) {
-      container.classList.add('show');
+      container.classList.add("show");
     }
   }, []);
 

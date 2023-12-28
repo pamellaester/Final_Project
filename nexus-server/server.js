@@ -14,14 +14,14 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/register', registerRouter);
-app.use('/login', loginRouter);
-app.use('/user', userQuizRouter)
-app.use('/quiz-completion', quizCompletionRouter)
-app.use('/logout', logoutRouter)
-app.use('/safe-space', safeSpaceRouter)
-app.use('/check-list', checkListRouter)
+app.use("/register", registerRouter);
+app.use("/login", loginRouter);
+app.use("/user", userQuizRouter);
+app.use("/quiz-completion", quizCompletionRouter);
+app.use("/logout", logoutRouter);
+app.use("/safe-space", safeSpaceRouter);
+app.use("/check-list", checkListRouter);
 
-
-
-app.listen(process.env.PORT, () => console.log(`Server is running on port ${process.env.PORT}.`));
+app.listen(process.env.PORT, () =>
+  console.log(`Server is running on port ${process.env.PORT}.`)
+);

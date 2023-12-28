@@ -1,12 +1,10 @@
-/* Body styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* Light background */
+  background-color: #ffffff; 
 }
 
-/* Full-screen container */
 .container {
   display: flex;
   flex-direction: column;
@@ -16,7 +14,6 @@ body {
   padding: 20px;
 }
 
-/* Quiz section styles */
 .quiz-section {
   display: flex;
   flex-direction: column;
@@ -26,29 +23,25 @@ body {
   margin: auto;
 }
 
-/* Card styles */
 .quiz-card {
   width: 100%;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff; 
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
 
 .quiz-card:hover {
-  transform: scale(1.05); /* Scale effect on hover */
+  transform: scale(1.05);
 }
 
-/* Loading state styles */
 .loading {
   font-size: 18px;
   color: #555;
 }
-/* Add to your existing CSS or create a new CSS file */
 
-/* Options container */
 .options-container {
   display: flex;
   flex-direction: column;
@@ -58,19 +51,16 @@ body {
   max-width: 400px;
   padding: 40px;
   background-color: #ffffff;
-  border-radius: 20px; /* Adjust border-radius */
+  border-radius: 20px;
   text-align: center;
 }
 
-/* Adjust the option cards to fit the width of the buttons */
-/* Updated CSS for options grid */
 .options-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 15px;
 }
 
-/* Adjustments for the option cards */
 .option-card {
   color: #6c63ff;
   width: 370px;
@@ -82,8 +72,7 @@ body {
   cursor: pointer;
   outline: none;
 }
-
-/* Styles for selected option */
+z
 .option-card.selected {
   background-color: #6c63ff;
   color: #ffffff;
@@ -94,10 +83,6 @@ body {
   transform: translateY(-5px);
 }
 
-
-/* Add these styles to your CSS file */
-
-/* Custom select styles */
 .select-container {
   position: relative;
   width: 100%;
@@ -106,7 +91,7 @@ body {
 .select-container::after {
   content: "▼";
   font-size: 12px;
-  color: #6b63ff; /* Arrow color */
+  color: #6b63ff; 
   position: absolute;
   top: 50%;
   right: 30px;
@@ -128,15 +113,13 @@ body {
   cursor: pointer;
 }
 
-/* Hover effect */
 .select-container select:hover {
   background-color: #6b63ff12;
 }
 
-/* Focus effect */
 .select-container select:focus {
   outline: none;
-  border-color: #6b63ff; /* Focus border color */
-  box-shadow: 0 0 5px rgba(107, 99, 255, 0.5); /* Focus box-shadow */
+  border-color: #6b63ff;
+  box-shadow: 0 0 5px rgba(107, 99, 255, 0.5); 
 }
 

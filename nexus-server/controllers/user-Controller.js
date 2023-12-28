@@ -7,8 +7,6 @@ const UserController = {
   register: async (req, res) => {
     try {
       const { username, email, password } = req.body;
-      console.log("req.body",req.body)
-
       const hashedPassword = await bcrypt.hash(password, 10);
 
       const existingUser = await UserModel.findOne({ username });
@@ -21,8 +19,6 @@ const UserController = {
         username,
         email,
       });
-
-      console.log("new_user:",newUser)
 
       if (!newUser || !newUser.id) {
         return res.status(500).json({ error: "Failed to create user" });
@@ -52,19 +48,22 @@ const UserController = {
       if (!user) {
         return res.status(404).json({ error: "User not found" });
       }
-  
+
       const hashedPassword = await HashPwdModel.findOne({ user_id: user.id });
-  
+
       if (!hashedPassword) {
         return res.status(401).json({ error: "Invalid credentials" });
       }
-  
-      const passwordMatch = await bcrypt.compare(password, hashedPassword.password);
-  
+
+      const passwordMatch = await bcrypt.compare(
+        password,
+        hashedPassword.password
+      );
+
       if (!passwordMatch) {
         return res.status(401).json({ error: "Invalid password" });
       }
-  
+
       res.status(200).json({ message: "Login successful", user: user.id });
     } catch (error) {
       console.error(error);
@@ -72,30 +71,40 @@ const UserController = {
     }
   },
 
-  saveQuizResponses : async (req, res) => {
-    const user_id = req.params.id ;
+  saveQuizResponses: async (req, res) => {
+    const user_id = req.params.id;
     const quizResponses = req.body;
-  
-    try {
-      await UserModel.create_user_profile({ user_id: user_id, ...quizResponses });
-      await db('users').where({ id: user_id }).update({ quiz_completed: true });
-  
-      res.status(200).json({ success: true, message: `'Quiz responses saved successfully' ${res}` });
-    } catch (error) {
-      console.error('Error saving quiz responses:', error);
-      res.status(500).json({ success: false, error: 'Failed to save quiz responses' });
-    }
-  },
-  
-  quizCompletion: async (req, res) => { 
-    const user_id  = req.params.id; 
 
     try {
-      await db('users').where({ id: user_id }).update({ quiz_completed: true });
-      res.sendStatus(200); 
+      await UserModel.create_user_profile({
+        user_id: user_id,
+        ...quizResponses,
+      });
+      await db("users").where({ id: user_id }).update({ quiz_completed: true });
+
+      res
+        .status(200)
+        .json({
+          success: true,
+          message: `'Quiz responses saved successfully' ${res}`,
+        });
     } catch (error) {
-      console.error('Error marking quiz completion:', error);
-      res.sendStatus(500); 
+      console.error("Error saving quiz responses:", error);
+      res
+        .status(500)
+        .json({ success: false, error: "Failed to save quiz responses" });
+    }
+  },
+
+  quizCompletion: async (req, res) => {
+    const user_id = req.params.id;
+
+    try {
+      await db("users").where({ id: user_id }).update({ quiz_completed: true });
+      res.sendStatus(200);
+    } catch (error) {
+      console.error("Error marking quiz completion:", error);
+      res.sendStatus(500);
     }
   },
 
@@ -107,21 +116,18 @@ const UserController = {
     const userId = req.params.id;
 
     try {
-      // Fetch user data or quiz completion status based on userId
       const user = await UserModel.findByPk(userId);
 
       if (!user) {
-        return res.status(404).json({ error: 'User not found' });
+        return res.status(404).json({ error: "User not found" });
       }
 
-      // Return the quiz completion status
       res.status(200).json({ quiz_completed: user.quiz_completed });
     } catch (error) {
-      console.error('Error fetching quiz completion status:', error);
-      res.status(500).json({ error: 'Failed to fetch quiz completion status' });
+      console.error("Error fetching quiz completion status:", error);
+      res.status(500).json({ error: "Failed to fetch quiz completion status" });
     }
   },
-
 };
 
 module.exports = UserController;

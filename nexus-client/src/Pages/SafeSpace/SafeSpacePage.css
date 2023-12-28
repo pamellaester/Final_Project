@@ -1,11 +1,11 @@
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
 }
 
 .welc {
@@ -13,57 +13,57 @@ body {
 }
 
 .safe-space {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .info-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .info-section h2 {
-    width: 100vw;
-    margin: 0;
-    font-size: 28px;
-    padding: 10px;
-    box-sizing: border-box;
+  width: 100vw;
+  margin: 0;
+  font-size: 28px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .info-section h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .info-section p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .info-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .info-section li {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .reminder {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    margin-top: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: auto;
 }
 
 .section-welcome {
@@ -90,36 +90,36 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f6f6f6;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-  }
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .section {
-    transform: translateY(-50%);
-  }
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.section {
+  transform: translateY(-50%);
+}
 
 .cute-card {
   

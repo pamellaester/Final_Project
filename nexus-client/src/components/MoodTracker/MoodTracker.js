@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
-import './MoodTracker.css'
+import React, { useState } from "react";
+import "./MoodTracker.css";
 
 const MoodTracker = () => {
-  const [selectedMood, setSelectedMood] = useState('');
+  const [selectedMood, setSelectedMood] = useState("");
 
   const handleMoodSelection = (mood) => {
     setSelectedMood(mood);
   };
 
-  const moodEmojis = ['😊', '😐', '😢', '😡', '😍', '🥳', '😴', '😎', '🤯', '🤔'];
+  const moodEmojis = [
+    "😊",
+    "😐",
+    "😢",
+    "😡",
+    "😍",
+    "🥳",
+    "😴",
+    "😎",
+    "🤯",
+    "🤔",
+  ];
 
   return (
     <div className="mood-tracker-container">
@@ -17,7 +28,7 @@ const MoodTracker = () => {
         {moodEmojis.map((emoji, index) => (
           <span
             key={index}
-            className={`mood-icon ${selectedMood === emoji ? 'selected' : ''}`}
+            className={`mood-icon ${selectedMood === emoji ? "selected" : ""}`}
             role="img"
             aria-label={`Mood ${index}`}
             onClick={() => handleMoodSelection(emoji)}
@@ -31,8 +42,6 @@ const MoodTracker = () => {
       )}
     </div>
   );
-}
+};
 
 export default MoodTracker;
-
-

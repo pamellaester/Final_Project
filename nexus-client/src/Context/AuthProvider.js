@@ -6,11 +6,11 @@ export const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState();
 
   const handleLogout = () => {
-    setAuth(false); 
+    setAuth(false);
   };
 
   return (
-    <AuthContext.Provider value={{ auth, setAuth , handleLogout }}>
+    <AuthContext.Provider value={{ auth, setAuth, handleLogout }}>
       {children}
     </AuthContext.Provider>
   );

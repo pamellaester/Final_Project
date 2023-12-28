@@ -1,8 +1,7 @@
 import React from "react";
 // import useAuth from "../../hooks/useAuth";
 import "./SafeSpacePage.css";
-import welcome from '../../assets/welcome.png'; 
-
+import welcome from "../../assets/welcome.png";
 
 const SafeSpacePage = () => {
   // const { auth } = useAuth();
@@ -10,7 +9,11 @@ const SafeSpacePage = () => {
   return (
     <>
       <div className="page-content">
-        <img src={welcome} alt="Image description 1" className="info-section section-welcome floating-element" />
+        <img
+          src={welcome}
+          alt="welcome"
+          className="info-section section-welcome floating-element"
+        />
         <h1 className="welc">TO SAFE PLACE</h1>
 
         <div className="info-section">
@@ -60,30 +63,43 @@ const SafeSpacePage = () => {
             </li>
           </ul>
         </div>
-<div className="info-section">
-        <div className="cute-card ">
+        <div className="info-section">
+          <div className="cute-card ">
             <h2>How to Use</h2>
-            <p>The form is designed to capture crucial details about your mental state during a crisis </p>
+            <p>
+              The form is designed to capture crucial details about your mental
+              state during a crisis{" "}
+            </p>
             <ul>
               <li>
-                <strong>Date and Severity Level:</strong> Choose the date and time of the crisis incident from the date-time picker. Select the appropriate severity level from the dropdown list.
+                <strong>Date and Severity Level:</strong> Choose the date and
+                time of the crisis incident from the date-time picker. Select
+                the appropriate severity level from the dropdown list.
               </li>
               <li>
-                <strong>Triggers:</strong> Input triggers that may have led to the crisis. Add multiple triggers by clicking the "+" button. Remove any trigger by clicking the "-" button beside it.
+                <strong>Triggers:</strong> Input triggers that may have led to
+                the crisis. Add multiple triggers by clicking the "+" button.
+                Remove any trigger by clicking the "-" button beside it.
               </li>
               <li>
-                <strong>Negative Thoughts:</strong> Input negative thoughts experienced during the crisis. Add multiple thoughts by clicking the "+" button. Delete specific thoughts by clicking the "-" button.
+                <strong>Negative Thoughts:</strong> Input negative thoughts
+                experienced during the crisis. Add multiple thoughts by clicking
+                the "+" button. Delete specific thoughts by clicking the "-"
+                button.
               </li>
               <li>
-                <strong>Save:</strong> After filling in all required information, click the "Save" button. This action will store your data and display a confirmation.
+                <strong>Save:</strong> After filling in all required
+                information, click the "Save" button. This action will store
+                your data and display a confirmation.
               </li>
               <li>
-                <strong>Post-Save:</strong> After a brief moment, the system will automatically take you back to where you started.
+                <strong>Post-Save:</strong> After a brief moment, the system
+                will automatically take you back to where you started.
               </li>
             </ul>
           </div>
         </div>
-        </div>
+      </div>
     </>
   );
 };
