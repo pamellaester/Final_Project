@@ -67,3 +67,9 @@ a {
 a:hover {
   color: #5a52cc; /* Darker new palette hover color */
 }
+
+.section-image {
+  width: 60%;
+  max-width: 100%;
+}
+

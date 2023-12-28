@@ -1,4 +1,6 @@
-/* Styles for the CheckListCard component */
+  .log {
+    margin-top: 75px;
+  }
   
   .card h3 {
     margin-bottom: 8px;
@@ -20,3 +22,7 @@
     color: #888;
   }
   
+  .section-empty {
+    width: 25%;
+    max-width: 100%;
+  }

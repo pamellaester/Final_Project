@@ -3,6 +3,7 @@ import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import CheckListCard from "../../components/CheckListCard/CheckListCard";
 import "./CheckList.css";
+import empty from '../../assets/empty.png'; 
 
 const API_URL = "http://localhost:3000";
 
@@ -33,13 +34,14 @@ const CheckListPage = () => {
   }, [auth.id]);
 
   return (
-    <div>
+    <div className="checkList-section">
       {checkListData.length === 0 ? (
         <div className="info-section">
-          <h2>Your Check List is empty...</h2>
+          <img src={empty} alt="Image description 1" className="section-empty" />
+          <h2>Your Check List is empty!</h2>
         </div>
       ) : (
-        <div className="checklist-container">
+        <div className="log checklist-container">
           {checkListData.map((entry, index) => (
             <CheckListCard key={index} data={entry} />
           ))}

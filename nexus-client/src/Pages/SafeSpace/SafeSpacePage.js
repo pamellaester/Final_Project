@@ -1,6 +1,8 @@
 import React from "react";
 // import useAuth from "../../hooks/useAuth";
 import "./SafeSpacePage.css";
+import welcome from '../../assets/welcome.png'; 
+
 
 const SafeSpacePage = () => {
   // const { auth } = useAuth();
@@ -8,7 +10,9 @@ const SafeSpacePage = () => {
   return (
     <>
       <div className="page-content">
-        <h2 className="info-section"> Welcome to Your Safe Space</h2>
+        <img src={welcome} alt="Image description 1" className="info-section section-welcome floating-element" />
+        <h1 className="welc">TO SAFE PLACE</h1>
+
         <div className="info-section">
           <h3>Understanding Postpartum Anxiety</h3>
           <p>

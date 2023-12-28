@@ -1,5 +1,9 @@
 /* Navbar.css */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   background-color: #6c63ff; /* Background color */
   padding: 15px 0;
@@ -45,4 +49,27 @@
 
 .navbar-item:hover .navbar-link {
   color: #b8b5ff; /* Hover text color */
+}
+
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the background behind the content */
+  background-image: url('path_to_your_background_image.jpg');
+  /* Other background properties like background-size, background-position, etc. */
+  background-size: cover; /* Adjust as needed */
+  animation: calmBackground 60s linear infinite;
+}
+
+@keyframes calmBackground {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-10%, 0, 0); /* Adjust the value for a subtle movement */
+  }
 }

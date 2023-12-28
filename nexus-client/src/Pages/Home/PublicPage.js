@@ -2,6 +2,8 @@
 import React from 'react';
 import './PublicPage.css';
 
+import PostpartumDateTracker from "../../components/PostpartumDateTracker/PostpartumDateTracker"
+import hello from '../../assets/hello.png'; 
 
 const PublicPage = () => {
 
@@ -9,18 +11,23 @@ const PublicPage = () => {
     <div className="public-page">
       <div className="page-content">
         <div class="info-section">
-        <h1 >Welcome to the Postpartum Phase</h1>
+        <img src={hello} alt="Image description 1" className="section-image" />
+          <h1 >Welcome to the Postpartum Phase</h1>
           <p>
           The postpartum period, also known as the "fourth trimester," refers to the time following childbirth
           when a woman's body undergoes various physical and emotional changes.
-        </p>
+          </p>
+          <p>
+            Nexus was created to offer guidance and support during this delicate phase of your journey.
+          </p>
         </div>
         <div class="info-section">
           <h3>Phases of Postpartum</h3>
           <p>
           Postpartum is often divided into three phases: the initial postpartum phase (first six weeks),
           the subacute postpartum phase (up to six months), and the delayed postpartum phase (up to a year).
-        </p>
+          </p>
+          <PostpartumDateTracker/>
         </div>
         <div class="info-section">
           <h3>Challenges and Care</h3>
@@ -31,14 +38,14 @@ const PublicPage = () => {
           <p>
           It's crucial to seek support from healthcare professionals, family, and friends during this time
           and prioritize self-care.
-        </p>
+          </p>
         </div>
         <div class="info-section">
           <h3>Conclusion</h3>
           <p>
           The postpartum phase is a transformative period requiring physical and emotional adjustments.
           With adequate support and self-care, mothers can navigate this phase more comfortably.
-        </p>
+          </p>
         </div>
       </div>
     </div>

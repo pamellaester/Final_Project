@@ -8,7 +8,7 @@ const API_URL = "http://localhost:3000";
 
 const SafeSpaceBtn = () => {
   const { auth } = useAuth();
-  console.log(auth)
+  console.log(auth);
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -72,9 +72,8 @@ const SafeSpaceBtn = () => {
       console.log(formData);
 
       setSubmitted(true);
-      
       setTimeout(() => {
-        navigate(-1)
+        navigate(-1);
       }, 2000);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -84,88 +83,106 @@ const SafeSpaceBtn = () => {
   return (
     <>
       {!submitted ? (
-        <div className="info-section">
-          <h2>Crisis Check</h2>
+        <div className="sf-section info-section">
+          <h2>Crisis Check</h2> <br/>
           <form onSubmit={handleSubmit} className="form">
-            <div className="input-group">
-              <label htmlFor="date">Date</label>
-              <input
-                type="datetime-local"
-                id="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="input-group">
-              <label htmlFor="level">Level</label>
-              <select
-                id="level"
-                name="level"
-                value={formData.level}
-                onChange={handleChange}
-              >
-                <option value="">Select Level</option>
-                <option value="Mild">Mild</option>
-                <option value="Moderate">Moderate</option>
-                <option value="Severe">Severe</option>
-                <option value="Panic-Level">Panic-Level</option>
-              </select>
-            </div>
-            
-            {/* Triggers input group */}
-            <div className="input-group">
-              <label htmlFor="triggers">Triggers</label>
-              {formData.triggers.map((trigger, index) => (
-                <div key={index}>
-                  <input
-                    type="text"
-                    value={trigger}
-                    onChange={(e) => handleTriggerChange(index, e.target.value)}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => handleDeleteTrigger(index)}
-                  >
-                    -
-                  </button>
-                </div>
-              ))}
-              <button type="button" onClick={handleAddTrigger}>
-                +
-              </button>
+            <div className="column-btn">
+              <div className="input-group">
+                <label htmlFor="date">Date</label>
+                <input
+                  type="datetime-local"
+                  id="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="input-group">
+                <label htmlFor="level">Level</label>
+                <select
+                  id="level"
+                  name="level"
+                  value={formData.level}
+                  onChange={handleChange}
+                >
+                  <option value="">Select Level</option>
+                  <option value="Mild">Mild</option>
+                  <option value="Moderate">Moderate</option>
+                  <option value="Severe">Severe</option>
+                  <option value="Panic-Level">Panic-Level</option>
+                </select>
+              </div>
             </div>
 
             {/* Negative thoughts input group */}
-            <div className="input-group">
-              <label htmlFor="negative_thoughts">Negative Thoughts</label>
-              {formData.negative_thoughts.map((thought, index) => (
-                <div key={index}>
-                  <input
-                    type="text"
-                    value={thought}
-                    onChange={(e) =>
-                      handleNegativeThoughtChange(index, e.target.value)
-                    }
-                  />
-                  <button
-                    type="button"
-                    onClick={() => handleDeleteNegativeThought(index)}
-                  >
-                    _
-                  </button>
-                </div>
-              ))}
-              <button type="button" onClick={handleAddNegativeThought}>
-                +
-              </button>
-            </div>
+            <div className="input-item">
+              <div className="column-btn">
+                <div className="input-group">
+                  <label htmlFor="triggers">Triggers</label>
+                  {formData.triggers.map((trigger, index) => (
+                    <div key={index} className="btn-box">
+                      <input
+                        type="text"
+                        value={trigger}
+                        onChange={(e) =>
+                          handleTriggerChange(index, e.target.value)
+                        }
+                      />
+                      <div>
+                        <button
+                          className="btn"
+                          type="button"
+                          onClick={handleAddTrigger}
+                        >
+                          +
+                        </button>
+                        <button
+                          className="btn"
+                          type="button"
+                          onClick={() => handleDeleteTrigger(index)}
+                        >
+                          -
+                        </button>
+                      </div>
+                    </div>
+                  ))}
 
-            {/* Submit button */}
+                  <label htmlFor="negative_thoughts">Negative Thoughts</label>
+                  {formData.negative_thoughts.map((thought, index) => (
+                    <div key={index} className="btn-box">
+                      <input
+                        type="text"
+                        value={thought}
+                        onChange={(e) =>
+                          handleNegativeThoughtChange(index, e.target.value)
+                        }
+                      />
+                      <div>
+                        <button
+                          type="button"
+                          className="btn"
+                          onClick={handleAddNegativeThought}
+                        >
+                          +
+                        </button>
+                        <button
+                          className="btn"
+                          type="button"
+                          onClick={() => handleDeleteNegativeThought(index)}
+                        >
+                          -
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             <button type="submit" className="submit-btn">
-              Save
-            </button>
+            Save
+          </button>
           </form>
+          {/* Submit button */}
         </div>
       ) : (
         <div className="notification">

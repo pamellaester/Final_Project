@@ -1,7 +1,7 @@
-/* .component-container {
+.component-container {
   text-align: center;
   padding: 20px;
-  background-color: #f2e9f5; 
+  background-color: #6b63ff12; 
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   width: 80%;
@@ -13,6 +13,10 @@ h2 {
   margin-bottom: 15px;
 }
 
+h3 {
+  color: #6c63ff; 
+}
+
 label {
   display: block;
   margin-bottom: 10px;
@@ -20,16 +24,16 @@ label {
 
 input[type="date"] {
   padding: 8px;
-  border: 1px solid #6c63ff;
+  /* border: 1px solid #6c63ff; */
   border-radius: 5px;
 }
 
 input[type="date"]:focus {
   outline: none;
-  border-color: #7f5d9b; 
+  border-color: #6c63ff; 
 }
 
 p {
   margin-top: 20px;
   font-weight: bold;
-} */
+}

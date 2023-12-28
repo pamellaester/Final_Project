@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {faCheck,faTimes,faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import register from '../../assets/register.png'; 
 
 import axios from "axios";
 import "./RegisterPage.css";
@@ -209,6 +210,8 @@ const RegisterPage = () => {
             </div>
         </section>
       )}
+     <img src={register} alt="Image description 1" className="section-register" />
+
     </>
   );
 };

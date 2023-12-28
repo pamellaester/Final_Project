@@ -18,7 +18,7 @@ const PostpartumDateTracker = () => {
 
   return (
     <div className="component-container">
-      <p>Enter your due date:</p>
+      <h4>Enter your due date:</h4>
       <input
         type="date"
         id="dueDate"
@@ -26,7 +26,7 @@ const PostpartumDateTracker = () => {
         onChange={handleDateChange}
       />
       {daysPostpartum !== null && (
-        <p>You are {daysPostpartum} days postpartum.</p>
+        <h3>You are {daysPostpartum} days postpartum</h3>
       )}
     </div>
   );

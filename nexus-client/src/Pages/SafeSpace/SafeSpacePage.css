@@ -8,6 +8,9 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+.welc {
+  margin-top: -10px;
+}
 
 .safe-space {
     display: flex;
@@ -63,20 +66,28 @@ body {
     margin-top: auto;
 }
 
+.section-welcome {
+  margin-top: 70px;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
 
+.floating-element {
+  animation: floatAnimation 3s ease-in-out infinite;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
 
 .container {
     width: 80%;
@@ -106,39 +117,9 @@ body {
     font-weight: bold;
   }
 
-  
-  .submit-btn {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #45a049;
-  }
-
-  .background {
-    /* background-image: url('your-image.jpg'); */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* Apply Parallax Effect to Other Elements */
   .section {
     transform: translateY(-50%);
   }
-  
-  
-  /* Other styles... */
-
-/* Add your existing styles here */
 
 .cute-card {
   

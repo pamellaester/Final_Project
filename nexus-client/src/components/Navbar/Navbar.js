@@ -17,7 +17,7 @@ const Navbar = () => {
         </li>
         {auth ? (
           <>
-            <li className="navbar-item">
+            <li className="navbar-item ">
               <Link to="/user" className="navbar-link">
                 Profile
               </Link>

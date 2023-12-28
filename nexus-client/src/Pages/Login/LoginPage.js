@@ -4,10 +4,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./LoginPage.css";
 
+import login from '../../assets/login.png'; 
+
+
 const API_URL = "http://localhost:3000";
 
 const Login = () => {
-  const { setAuth, auth } = useAuth();
+  const { setAuth } = useAuth();
   const userRef = useRef();
   const errRef = useRef();
 
@@ -28,27 +31,6 @@ const Login = () => {
   useEffect(() => {
     setErrMsg("");
   }, [formData.username, formData.password]);
-
-  useEffect(() => {
-    const checkQuizCompletion = async () => {
-      try {
-        const response = await axios.get(`${API_URL}/quiz-completion/${auth.id}`);
-        const { quiz_completed } = response.data;
-  
-        if (!quiz_completed) {
-          navigate("/user"); // Redirect to the quiz page if quiz_completed is false
-        } else {
-          // navigate("/login"); // Redirect to the user page if quiz_completed is true
-        }
-      } catch (error) {
-        console.error('Error checking quiz completion:', error);
-      }
-    };
-    
-    if (success && auth) {
-      checkQuizCompletion();
-    }
-  }, [success, auth, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -146,6 +128,8 @@ const Login = () => {
           </div>
         </section>
       )}
+      <img src={login} alt="Image description 1" className="section-login" />
+
     </>
   );
 };

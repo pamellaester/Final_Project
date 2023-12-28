@@ -78,8 +78,9 @@ const UserController = {
   
     try {
       await UserModel.create_user_profile({ user_id: user_id, ...quizResponses });
+      await db('users').where({ id: user_id }).update({ quiz_completed: true });
   
-      res.status(200).json({ success: true, message: 'Quiz responses saved successfully' });
+      res.status(200).json({ success: true, message: `'Quiz responses saved successfully' ${res}` });
     } catch (error) {
       console.error('Error saving quiz responses:', error);
       res.status(500).json({ success: false, error: 'Failed to save quiz responses' });
@@ -101,6 +102,26 @@ const UserController = {
   logout: async (req, res) => {
     res.status(200).json({ message: "Logout successful" });
   },
+
+  getQuizCompletionStatus: async (req, res) => {
+    const userId = req.params.id;
+
+    try {
+      // Fetch user data or quiz completion status based on userId
+      const user = await UserModel.findByPk(userId);
+
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+
+      // Return the quiz completion status
+      res.status(200).json({ quiz_completed: user.quiz_completed });
+    } catch (error) {
+      console.error('Error fetching quiz completion status:', error);
+      res.status(500).json({ error: 'Failed to fetch quiz completion status' });
+    }
+  },
+
 };
 
 module.exports = UserController;

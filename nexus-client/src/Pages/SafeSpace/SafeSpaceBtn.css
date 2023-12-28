@@ -1,6 +1,108 @@
+/* Add to your existing CSS or create a new CSS file */
 
-  
+.sf-section {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
+.form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+}
+
+.input-group {
+  display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.input-item {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-around;
+}
+
+.input-item input {
+  width: 300px;
+  padding: 20px;
+}
+
+.action-buttons button {
+  padding:5px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 0;
+  margin-left:15px;
+  font-size: 15px;
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  /* align-content: stretch; */
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+#level {
+  width: 150px;
+  text-align: center;
+  padding: 20px;
+  border: none;
+  background-color: #6b63ff12;
+  border-radius: 25px;
+}
+
+.column-btn {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: center;
+}
+
+.submit-btn {
+  width: 400px;
+  background-color: #ffcc00;
+  padding: 20px;
+  border-radius: 25px;
+
+}
+
+.submit-btn :hover {
+  background-color: #6c63ff;
+}
 
 .notification {
     background-color: #ffcc00; /* Yellow background */

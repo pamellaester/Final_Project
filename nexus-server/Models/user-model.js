@@ -49,20 +49,14 @@ const UserModel = {
     }
   },
 
-  create_user_profile: async (user_id, name, age_range, localization, gender, kids_count) => {
+  create_user_profile: async (quizResponses) => {
     try {
-      db("user_quiz_responses").insert({
-        user_id,
-        name,
-        age_range,
-        localization,
-        gender,
-        kids_count,
-      });
+      await db("user_quiz_responses").insert(quizResponses);
     } catch (error) {
       throw error;
     }
   },
+  
 };
 
 module.exports = UserModel;
